@@ -23,6 +23,25 @@ const userSchema = mongoose.Schema(
         }
       },
     },
+    weight: {
+      type: Number,
+      required: true,
+      min: 40,
+      max: 400,
+  
+    },
+    // TO-DO
+    // Figure out how to do birthday instead
+    age: {
+      type: Number,
+      required: true,
+      min: 16,
+      max: 100,
+    },
+    sex: {
+      type: Boolean,
+      required: true,
+    },
     password: {
       type: String,
       required: true,

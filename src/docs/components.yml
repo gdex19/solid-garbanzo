@@ -13,11 +13,20 @@ components:
         role:
           type: string
           enum: [user, admin]
+        weight:
+          type: int
+        sex:
+          type: boolean
+        age:
+          type: INT
       example:
         id: 5ebac534954b54139806c112
         email: fake@example.com
         name: fake name
         role: user
+        weight: 160
+        sex: 0
+        age: 21
 
     Token:
       type: object

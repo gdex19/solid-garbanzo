@@ -26,17 +26,22 @@ describe('Auth routes', () => {
         name: faker.name.findName(),
         email: faker.internet.email().toLowerCase(),
         password: 'password1',
+        age: 21,
+        weight: 160,
+        sex: false,
       };
     });
 
     test('should return 201 and successfully register user if request data is ok', async () => {
       const res = await request(app).post('/v1/auth/register').send(newUser).expect(httpStatus.CREATED);
-
       expect(res.body.user).not.toHaveProperty('password');
       expect(res.body.user).toEqual({
         id: expect.anything(),
         name: newUser.name,
         email: newUser.email,
+        weight: 160,
+        sex: false,
+        age: 21,
         role: 'user',
         isEmailVerified: false,
       });
@@ -97,6 +102,9 @@ describe('Auth routes', () => {
         name: userOne.name,
         email: userOne.email,
         role: userOne.role,
+        weight: userOne.weight,
+        sex: userOne.sex,
+        age: userOne.age,
         isEmailVerified: userOne.isEmailVerified,
       });
 

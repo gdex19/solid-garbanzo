@@ -40,6 +40,9 @@ module.exports = router;
  *               - name
  *               - email
  *               - password
+ *               - age
+ *               - weight
+ *               - sex
  *             properties:
  *               name:
  *                 type: string
@@ -52,6 +55,15 @@ module.exports = router;
  *                 format: password
  *                 minLength: 8
  *                 description: At least one number and one letter
+ *               age:
+ *                 type: integer
+ *                 description: between 18 and 100
+ *               weight:
+ *                 type: integer
+ *                 description: between 40 and 400
+ *               sex:
+ *                 type: boolean
+ *                 description: false for male, true for female
  *             example:
  *               name: fake name
  *               email: fake@example.com

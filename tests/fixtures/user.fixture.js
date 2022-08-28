@@ -13,6 +13,9 @@ const userOne = {
   email: faker.internet.email().toLowerCase(),
   password,
   role: 'user',
+  weight: 165,
+  sex: false,
+  age: 18,
   isEmailVerified: false,
 };
 
@@ -22,6 +25,9 @@ const userTwo = {
   email: faker.internet.email().toLowerCase(),
   password,
   role: 'user',
+  weight: 143,
+  sex: true,
+  age: 29,
   isEmailVerified: false,
 };
 
@@ -30,6 +36,9 @@ const admin = {
   name: faker.name.findName(),
   email: faker.internet.email().toLowerCase(),
   password,
+  weight: 175,
+  sex: false,
+  age: 27,
   role: 'admin',
   isEmailVerified: false,
 };
